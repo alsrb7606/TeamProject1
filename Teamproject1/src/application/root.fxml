@@ -42,7 +42,7 @@
 		</HBox>
 		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="800.0" spacing="10.0">
         	<children>
-            	<Button mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" text="뒤로가기" />
+            	<Button fx:id="backmain" onAction="#backMain" mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" text="뒤로가기" />
          	</children>
 		</HBox>
 	</children>
