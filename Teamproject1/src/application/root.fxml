@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox prefHeight="400.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.rootController">
+	<padding>
+		<Insets top="20" />
+	</padding>  
+	
+	<children>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="780.0" spacing="60.0">
+        	<children>
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="1번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="2번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="3번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="4번" />
+         	</children>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="780.0" spacing="60.0">
+        	<children>
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="5번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="6번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="7번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="8번" />
+         	</children>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="780.0" spacing="60.0">
+        	<children>
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="9번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="10번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="11번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="12번" />
+         	</children>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="800.0" spacing="10.0">
+        	<children>
+            	<Button mnemonicParsing="false" prefHeight="100.0" prefWidth="300.0" text="뒤로가기" />
+         	</children>
+		</HBox>
+	</children>
+</VBox>
