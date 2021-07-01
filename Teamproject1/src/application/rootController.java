@@ -28,6 +28,7 @@ public class rootController implements Initializable {
 	
 	public void selectArea(ActionEvent event) {
 		try {
+			System.out.println(TestData.hashMap.get("apple"));	//test
 			Parent select1 =FXMLLoader.load(getClass().getResource("Select.fxml"));
 			Scene scene = new Scene(select1);
 			Stage primaryStage =(Stage) btnspace.getScene().getWindow();

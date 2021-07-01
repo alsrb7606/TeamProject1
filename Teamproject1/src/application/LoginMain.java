@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 public class LoginMain extends Application{
 
 	public static void main(String[] args) {
+		TestData.hashMap.put("apple", "banana");	//test
+		//System.out.println(TestData.hashMap.get("apple"));
 		launch(args);
 		
 	}
