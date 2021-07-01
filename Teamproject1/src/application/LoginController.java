@@ -17,7 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
  
  
-public class Controller1 implements Initializable{
+public class LoginController implements Initializable{
     @FXML private Button loginButton;
     @FXML private TextField textFieldID;
     @FXML private TextField textFieldPw;

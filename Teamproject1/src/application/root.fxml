@@ -18,26 +18,26 @@
 	<children>
 		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="780.0" spacing="60.0">
         	<children>
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="1번" />
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="2번" />
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="3번" />
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="4번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="1번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="2번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="3번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="4번" />
          	</children>
 		</HBox>
 		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="780.0" spacing="60.0">
         	<children>
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="5번" />
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="6번" />
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="7번" />
-            	<Button fx:id="btnspace8" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="8번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="5번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="6번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="7번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="8번" />
          	</children>
 		</HBox>
 		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="780.0" spacing="60.0">
         	<children>
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="9번" />
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="10번" />
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="11번" />
-            	<Button fx:id="btnspace" mnemonicParsing="false" onMouseClicked="#btnEvent" prefHeight="100.0" prefWidth="150.0" text="12번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="9번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="10번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="11번" />
+            	<Button fx:id="btnspace" mnemonicParsing="false" onAction="#selectArea" prefHeight="100.0" prefWidth="150.0" text="12번" />
          	</children>
 		</HBox>
 		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="800.0" spacing="10.0">
