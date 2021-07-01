@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,40 +16,22 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class rootController implements Initializable {
+	// 자리 현황판 동작 정리
 	@FXML private Button btnspace;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		btnspace.setOnMouseClicked(new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent event) { 
-				if(event.getClickCount() > 1) {
-					try {
-						Parent select =FXMLLoader.load(getClass().getResource("Info.fxml"));
-						Scene scene = new Scene(select);
-						Stage primaryStage =(Stage) btnspace.getScene().getWindow();
-						primaryStage.setScene(scene);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				} else {
-					try {
-						Parent select =FXMLLoader.load(getClass().getResource("Select.fxml"));
-						Scene scene = new Scene(select);
-						Stage primaryStage =(Stage) btnspace.getScene().getWindow();
-						primaryStage.setScene(scene);
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		});
+		btnspace.setOnAction(e->selectArea(e));
 	}
 	
-	public void btnEvent(MouseEvent event) throws IOException {
-		Parent select =FXMLLoader.load(getClass().getResource("Info.fxml"));
-		Scene scene = new Scene(select);
-		Stage primaryStage =(Stage) btnspace.getScene().getWindow();
-		primaryStage.setScene(scene);
+	public void selectArea(ActionEvent event) {
+		try {
+			Parent select =FXMLLoader.load(getClass().getResource("Select.fxml"));
+			Scene scene = new Scene(select);
+			Stage primaryStage =(Stage) btnspace.getScene().getWindow();
+			primaryStage.setScene(scene);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
