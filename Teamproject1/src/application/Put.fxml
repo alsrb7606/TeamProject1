@@ -8,7 +8,7 @@
 
 <GridPane hgap="10.0" vgap="10.0" prefWidth="300.0" 
 		  xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
-		  fx:controller="application.PutOutController">
+		  fx:controller="application.PutController">
    <padding>
    		<Insets topRightBottomLeft="10.0"/>
    </padding>
@@ -23,7 +23,7 @@
    			  GridPane.columnSpan="2" GridPane.hgrow="ALWAYS"
    			  alignment="CENTER" spacing="20.0" >
    			<children>
-   				<Button fx:id="putOutInfo" text="입력" onAction="#PutOutOk" />
+   				<Button fx:id="putInfo" text="입력" onAction="#PutOk" />
    				<Button fx:id="backroot" text="화면 복귀" onAction="#backRoot" />
    			</children>	  
    		</HBox>

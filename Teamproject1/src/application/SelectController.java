@@ -24,7 +24,7 @@ public class SelectController implements Initializable{
 
 	public void PutInCar(ActionEvent event) {
 		try {
-			Parent putin =FXMLLoader.load(getClass().getResource("PutIn.fxml"));
+			Parent putin =FXMLLoader.load(getClass().getResource("Put.fxml"));
 			Scene scene = new Scene(putin);
 			Stage primaryStage =(Stage) putIn.getScene().getWindow();
 			primaryStage.setScene(scene);
@@ -35,7 +35,7 @@ public class SelectController implements Initializable{
 
 	public void PutOutCar(ActionEvent event) {
 		try {
-			Parent putout =FXMLLoader.load(getClass().getResource("PutOut.fxml"));
+			Parent putout =FXMLLoader.load(getClass().getResource("Put.fxml"));
 			Scene scene = new Scene(putout);
 			Stage primaryStage =(Stage) putOut.getScene().getWindow();
 			primaryStage.setScene(scene);
