@@ -27,16 +27,16 @@ public class PutController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 
 		backroot.setOnAction(e->backRoot(e));
-		putInfo.setOnAction(e->PutInOk(e));
+		putInfo.setOnAction(e->PutOk(e));		//test
 	}
 	
 	public void PutOk(ActionEvent event) {
 		try {
-			Data data= new Data();
+			Data data= (Data) CarData.hashMap.get(CarData.s);
 			data.carNumber=carNumTextField.getText();
 			data.curDate=LocalDate.now();
 			data.inTime=LocalTime.now();
-			data.locationNumber=locationNum.getText();
+			//data.locationNumber=locationNum.getText();
 			
 			CarData.hashMap.put(data.locationNumber, data);
 			

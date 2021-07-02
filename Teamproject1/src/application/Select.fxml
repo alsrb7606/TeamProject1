@@ -10,18 +10,29 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectController">
+<AnchorPane prefHeight="400.0" prefWidth="400.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectController">
    <children>
+   <VBox>
+   	  <HBox>
+   	  		<Label text="자리 번호"/>
+   	  		<TextField fx:id="LocationNum"  prefHeight="57.0" prefWidth="211.0" />
+   	  </HBox>	
+   	  <HBox>
+   	  		<Label text="차번호"/>
+   	  		<TextField fx:id="CarNum"  prefHeight="57.0" prefWidth="211.0" />
+   	  </HBox>
+   	  <HBox>
+   	  		<Label text="주차시간"/>
+   	  		<TextField fx:id="CarTime"  prefHeight="57.0" prefWidth="211.0" />	
+   	  </HBox>
+   </VBox>		
       <HBox alignment="CENTER" layoutY="269.0" prefHeight="150.0" prefWidth="400.0">
          <children>
  			        
-         
             <Button fx:id="putIn" mnemonicParsing="false" onAction="#PutInCar" prefHeight="150.0" prefWidth="200.0" text="입차" />
             <Button fx:id="putOut" mnemonicParsing="false" onAction="#PutOutCar" prefHeight="150.0" prefWidth="200.0" text="출차" />
          </children>
       </HBox>
-      <TextField id="labelLocationNum" layoutX="49.0" layoutY="36.0" prefHeight="57.0" prefWidth="211.0" />
-      <TextField id="labelCarNum" layoutX="49.0" layoutY="114.0" prefHeight="57.0" prefWidth="211.0" />
-      <TextField id="labelCarTime" layoutX="49.0" layoutY="195.0" prefHeight="57.0" prefWidth="211.0" />
+      
    </children>
 </AnchorPane>

@@ -10,26 +10,27 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class SelectController implements Initializable{
 	@FXML private Button putIn;
 	@FXML private Button putOut;
-	@FXML private TextField labelLocationNum;	
-	@FXML private TextField labelCarNum;
-	@FXML private TextField labelCarTime;
+	@FXML private TextField LocationNum;	
+	@FXML private TextField CarNum;
+	@FXML private TextField CarTime;
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		putIn.setOnAction(e->PutInCar(e));
 		putOut.setOnAction(e->PutOutCar(e));
-		if(CarData.hashMap.size()!=0) {
-		Data data= (Data) CarData.hashMap.get("1");
-		labelLocationNum.setText(data.locationNumber);
-		labelCarNum.setText(data.carNumber);
-		labelCarTime.setText(data.inTime.toString());
-		}
+		
+		
+		Data data= (Data) CarData.hashMap.get(CarData.s);
+		LocationNum.setText(data.locationNumber.toString());
+		CarNum.setText(data.carNumber);
+		//CarTime.setText(data.inTime.toString());
+		
 	}
 
 	public void PutInCar(ActionEvent event) {

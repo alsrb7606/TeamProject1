@@ -4,8 +4,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,6 +22,7 @@ public class MainControl implements Initializable{
 		
 	public void checkParking(ActionEvent event) {		//주차현황 버튼 처리 메소드
 		try {
+			
 			Parent now = FXMLLoader.load(getClass().getResource("root.fxml"));
 			Scene scene = new Scene(now);
 			Stage primaryStage =(Stage) btn1.getScene().getWindow();
