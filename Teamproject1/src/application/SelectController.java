@@ -1,6 +1,8 @@
 package application;
 
 import java.net.URL;
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -27,9 +29,16 @@ public class SelectController implements Initializable{
 		
 		
 		Data data= (Data) CarData.hashMap.get(CarData.s);
+		if(data.inTime!=null) {
+		LocalTime curTime = LocalTime.now();
+		LocalTime inTime = data.inTime;
+		Duration duration = Duration.between(inTime, curTime);
+		String duringTime =String.valueOf(duration.toMinutes());
+		CarTime.setText(duringTime+"Ка");
+		}
 		LocationNum.setText(data.locationNumber.toString());
 		CarNum.setText(data.carNumber);
-		//CarTime.setText(data.inTime.toString());
+		
 		
 	}
 

@@ -15,15 +15,15 @@
    <VBox>
    	  <HBox>
    	  		<Label text="자리 번호"/>
-   	  		<TextField fx:id="LocationNum"  prefHeight="57.0" prefWidth="211.0" />
+   	  		<TextField fx:id="LocationNum"  prefHeight="57.0" prefWidth="211.0" Editable="false"/>
    	  </HBox>	
    	  <HBox>
    	  		<Label text="차번호"/>
-   	  		<TextField fx:id="CarNum"  prefHeight="57.0" prefWidth="211.0" />
+   	  		<TextField fx:id="CarNum"  prefHeight="57.0" prefWidth="211.0" Editable="false"/>
    	  </HBox>
    	  <HBox>
    	  		<Label text="주차시간"/>
-   	  		<TextField fx:id="CarTime"  prefHeight="57.0" prefWidth="211.0" />	
+   	  		<TextField fx:id="CarTime"  prefHeight="57.0" prefWidth="211.0" Editable="false"/>	
    	  </HBox>
    </VBox>		
       <HBox alignment="CENTER" layoutY="269.0" prefHeight="150.0" prefWidth="400.0">

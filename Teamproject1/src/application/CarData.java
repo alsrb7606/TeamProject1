@@ -24,6 +24,7 @@ class Data {
 	String locationNumber;
 	String carNumber;
 	LocalTime inTime;
+	LocalTime curTime;		//현재 시간 추가
 	LocalTime outTime;
 	int price;
 	
