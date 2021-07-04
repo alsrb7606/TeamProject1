@@ -13,6 +13,7 @@ public class CarData {
 	static Map hashMap2 = new HashMap<Button, String>();
 	
 	static String s;		//주차장 자리번호이자 버튼번호
+	static int price;		//결제금액
 }
 
 class Data {

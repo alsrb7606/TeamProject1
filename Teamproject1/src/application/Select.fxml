@@ -10,29 +10,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectController">
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectController">
    <children>
-   <VBox>
-   	  <HBox>
-   	  		<Label text="자리 번호"/>
-   	  		<TextField fx:id="LocationNum"  prefHeight="57.0" prefWidth="211.0" Editable="false"/>
-   	  </HBox>	
-   	  <HBox>
-   	  		<Label text="차번호"/>
-   	  		<TextField fx:id="CarNum"  prefHeight="57.0" prefWidth="211.0" Editable="false"/>
-   	  </HBox>
-   	  <HBox>
-   	  		<Label text="주차시간"/>
-   	  		<TextField fx:id="CarTime"  prefHeight="57.0" prefWidth="211.0" Editable="false"/>	
-   	  </HBox>
-   </VBox>		
+   
+   	  <HBox />	
+   	  <HBox />
+   	  <HBox />
+   		
       <HBox alignment="CENTER" layoutY="269.0" prefHeight="150.0" prefWidth="400.0">
          <children>
  			        
             <Button fx:id="putIn" mnemonicParsing="false" onAction="#PutInCar" prefHeight="150.0" prefWidth="200.0" text="입차" />
-            <Button fx:id="putOut" mnemonicParsing="false" onAction="#PutOutCar" prefHeight="150.0" prefWidth="200.0" text="출차" />
+            <Button fx:id="putOut" mnemonicParsing="false" onAction="#PutOutCar" prefHeight="151.0" prefWidth="200.0" text="출차" />
+            <Button fx:id="backRoot" prefHeight="150.0" prefWidth="146.0" text="뒤로가기" />
          </children>
       </HBox>
+	  		<TextField fx:id="CarTime" Editable="false" layoutX="103.0" layoutY="181.0" prefHeight="57.0" prefWidth="211.0" />
+	  		<TextField fx:id="CarNum" Editable="false" layoutX="103.0" layoutY="106.0" prefHeight="57.0" prefWidth="211.0" />
+	  		<TextField fx:id="LocationNum" Editable="false" layoutX="103.0" layoutY="28.0" prefHeight="57.0" prefWidth="211.0" />
+	  		<Label layoutX="33.0" layoutY="202.0" text="주차시간" />
+	  		<Label layoutX="33.0" layoutY="43.0" prefHeight="27.0" prefWidth="59.0" text="자리 번호" />
+	  		<Label layoutX="33.0" layoutY="117.0" prefHeight="36.0" prefWidth="52.0" text="차번호" />
       
    </children>
 </AnchorPane>

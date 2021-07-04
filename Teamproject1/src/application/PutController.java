@@ -33,6 +33,7 @@ public class PutController implements Initializable{
 	public void PutOk(ActionEvent event) {
 		try {
 			Data data= (Data) CarData.hashMap.get(CarData.s);
+			data.locationNumber= CarData.s;	//자리번호에  static 값 넣기.
 			data.carNumber=carNumTextField.getText();
 			data.curDate=LocalDate.now();
 			data.inTime=LocalTime.now();

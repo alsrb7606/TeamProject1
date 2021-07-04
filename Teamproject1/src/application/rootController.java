@@ -49,6 +49,7 @@ public class rootController implements Initializable {
 	
 	public void selectArea1(ActionEvent event) {
 		try {
+			
 			CarData.s ="1";
 			Parent select1 =FXMLLoader.load(getClass().getResource("Select.fxml"));
 			Scene scene = new Scene(select1);
