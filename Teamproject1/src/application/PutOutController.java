@@ -25,9 +25,7 @@ public class PutOutController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		Data data = (Data) CarData.hashMap.get(CarData.s);	//데이터 가져오기   get(자리번호=static String s)
-		if(data.carNumber != null) {
-			data.inorout = false;
-		}
+		
 		inTime.setText(String.valueOf(data.inTime.getHour())+"시"+
 					String.valueOf(data.inTime.getMinute())+"분");
 	
@@ -46,6 +44,9 @@ public class PutOutController implements Initializable{
 		}
 		
 		payment.setOnAction(e-> {
+			if(data.carNumber != null) {
+				data.inorout = false;
+			}
 			Parent select2 = null;
 			try {
 				select2 = FXMLLoader.load(getClass().getResource("Payment.fxml"));
