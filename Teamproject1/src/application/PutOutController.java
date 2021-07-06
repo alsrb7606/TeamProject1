@@ -37,9 +37,12 @@ public class PutOutController implements Initializable{
 		if(data.inTime!=null) {
 			LocalTime curTime = LocalTime.now();
 			LocalTime inTime = data.inTime;
+			
 			Duration duration = Duration.between(inTime, curTime);
 			Long duringTime =duration.toMinutes();
 			CarData.price = (int) (duringTime*500);		//1분당 500원 계산
+			data.outTime=curTime;
+			data.price = CarData.price;
 			
 		}
 		

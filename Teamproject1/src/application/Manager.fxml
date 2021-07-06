@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import javafx.scene.text.*?>
+
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,28 +12,25 @@
 
 <AnchorPane prefHeight="550" prefWidth="650" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.ManagerController">
 	<children>
-		<Label layoutX="11" layoutY="9" text="List" />
-		<ListView fx:id="listView" layoutX="10" layoutY="30" prefHeight="400" prefWidth="100" />
+
 		
-		<Label layoutX="125" layoutY="9" text="주차정보" />
-		<TableView fx:id="tableView" layoutX="120" layoutY="30" prefHeight="400" prefWidth="500">
+		
+		<Label layoutX="83.0" layoutY="7.0" text="주차정보" />
+		<TableView fx:id="tableView" layoutX="77.0" layoutY="30" prefHeight="400" prefWidth="543.0">
 			<columns>
-				<TableColumn prefWidth="100" text="OutData" />
-				<TableColumn prefWidth="100" text="Carnum" />
-				<TableColumn prefWidth="100" text="Intime" />
-				<TableColumn prefWidth="100" text="Outtime" />
-				<TableColumn prefWidth="100" text="Price" />
+				<TableColumn fx:id="tc1" prefWidth="100" text="OutDate" />
+				<TableColumn fx:id="tc2" prefWidth="100" text="Carnum" />
+				<TableColumn fx:id="tc3" prefWidth="100" text="Intime" />
+				<TableColumn fx:id="tc4" prefWidth="100" text="Outtime" />
+				<TableColumn fx:id="tc5" prefWidth="100" text="Price" />
+
 			</columns>
 		</TableView>
 		
 		
-		<Button layoutX="205.0" layoutY="465.0" onAction="#handleBtnOkAction" prefHeight="50.0" prefWidth="120.0" text="뒤로가기">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-		<Button layoutX="370.0" layoutY="465.0" onAction="#handleBtnCancelAction" prefHeight="50.0" prefWidth="120.0" text="취소">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
+
+		<Button fx:id="backmain" layoutX="240" layoutY="480" text="뒤로가기" />
+		<Button layoutX="350" layoutY="480" text="취소" />
+
 	</children>
 </AnchorPane>

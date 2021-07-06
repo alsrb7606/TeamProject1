@@ -1,5 +1,6 @@
 package application;
 
+import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,33 +20,38 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class MainControl implements Initializable{
+
 	@FXML private Button Check;
 	@FXML private Label Clock;
-	
+	@FXML private Button btn2;
+  
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		clock();
 		Check.setOnAction(e -> checkParking(e));
+    btn2.setOnAction(e-> checkManager(e));		//ê´€ë¦¬ìž ì°½ìœ¼ë¡œ ì´ë™
+
 	}
 		
-	public void checkParking(ActionEvent event) {		//ÁÖÂ÷ÇöÈ² ¹öÆ° Ã³¸® ¸Þ¼Òµå
+	public void checkParking(ActionEvent event) {		//ì£¼ì°¨í˜„í™© ë²„íŠ¼ ì²˜ë¦¬ ë©”ì†Œë“œ
 		try {
 			
 			Parent now = FXMLLoader.load(getClass().getResource("root.fxml"));
 			Scene scene = new Scene(now);
 			Stage primaryStage =(Stage) Check.getScene().getWindow();
-			primaryStage.setTitle("ÁÖÂ÷°ü¸®½Ã½ºÅÛ");
+			primaryStage.setTitle("ì£¼ì°¨ê´€ë¦¬ì‹œìŠ¤í…œ");
 			primaryStage.setScene(scene);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
+
 	public void clock() {
 		Thread clock = new Thread() {
 			@Override
 			public void run() {
-				SimpleDateFormat sdf = new SimpleDateFormat("ÇöÀç½Ã°¢ : HH:mm:ss", Locale.KOREA);
+				SimpleDateFormat sdf = new SimpleDateFormat("í˜„ìž¬ì‹œê° : HH:mm:ss", Locale.KOREA);
 				while(true) {
 					String strDate = sdf.format(new Date());
 					Platform.runLater(() -> {
@@ -60,6 +66,22 @@ public class MainControl implements Initializable{
 		};
 		clock.setDaemon(true);
 		clock.start();
+	}
+
+
+	public void checkManager(ActionEvent event) {
+		Parent now = null;
+		try {
+			now = FXMLLoader.load(getClass().getResource("Manager.fxml"));
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		Scene scene = new Scene(now);
+		Stage primaryStage =(Stage) btn1.getScene().getWindow();
+		primaryStage.setScene(scene);
+		
+		
 	}
 
 }

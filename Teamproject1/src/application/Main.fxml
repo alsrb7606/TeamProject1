@@ -35,7 +35,11 @@
                   <Font size="48.0" />
                </font>
       			</Button>		
-      			<Button mnemonicParsing="false" prefHeight="430.0" prefWidth="430.0" text="관리자">
+
+      		
+
+      			<Button fx:id="btn2" mnemonicParsing="false" prefHeight="570.0" prefWidth="430.0" text="관리자">
+
       				<HBox.hgrow>
           				<Priority fx:constant="ALWAYS" />
        				</HBox.hgrow>
