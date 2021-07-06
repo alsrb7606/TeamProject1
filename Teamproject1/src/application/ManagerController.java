@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -27,11 +26,11 @@ public class ManagerController implements Initializable{
 	@FXML private TableColumn<CarManagerData, String> tc5;
 	
 	
-	static ObservableList carmanagerList= FXCollections.observableArrayList(
-			new CarManagerData(new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"),
-					new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"))
-			
-			);;
+	static ObservableList carmanagerList= FXCollections.observableArrayList();
+//			new CarManagerData(new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"),
+//					new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"))
+//			
+//			);;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {

@@ -18,12 +18,18 @@ public class PaymentController implements Initializable{
 	@FXML private Button check;		//뒤로가기 버튼
 	@FXML private TextField result;		//결제결과 텍스트필드
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		Data data = (Data) CarData.hashMap.get(CarData.s);
 		result.setText("총 결제금액: " +CarData.price+"원 결제 완료되었습니다. 감사합니다.");
-		ManagerController.carmanagerList.add(new CarManagerData(new SimpleStringProperty(data.curDate.toString()), new SimpleStringProperty(data.carNumber), 
-				new SimpleStringProperty(data.inTime.toString()), new SimpleStringProperty(data.outTime.toString()), new SimpleStringProperty(String.valueOf(data.price))));  		//결제완료되면 리스트에 데이터 업데이트
+		ManagerController.carmanagerList.add(new CarManagerData(new SimpleStringProperty(data.curDate.toString()), 
+											 new SimpleStringProperty(data.carNumber), 
+											 new SimpleStringProperty(String.valueOf(data.inTime.getHour())+"시"+
+										         String.valueOf(data.inTime.getMinute())+"분"), 
+											 new SimpleStringProperty(String.valueOf(data.outTime.getHour())+"시"+
+								                 String.valueOf(data.outTime.getMinute())+"분" ), 
+											 new SimpleStringProperty(String.valueOf(data.price))));  		//결제완료되면 리스트에 데이터 업데이트
 		check.setOnAction(e->backRoot(e));
 	}
 	
