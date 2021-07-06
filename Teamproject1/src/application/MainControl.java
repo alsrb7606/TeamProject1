@@ -29,17 +29,17 @@ public class MainControl implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		clock();
 		Check.setOnAction(e -> checkParking(e));
-    btn2.setOnAction(e-> checkManager(e));		//ê´€ë¦¬ìž ì°½ìœ¼ë¡œ ì´ë™
+		btn2.setOnAction(e-> checkManager(e));		
 
 	}
 		
-	public void checkParking(ActionEvent event) {		//ì£¼ì°¨í˜„í™© ë²„íŠ¼ ì²˜ë¦¬ ë©”ì†Œë“œ
+	public void checkParking(ActionEvent event) {		
 		try {
 			
 			Parent now = FXMLLoader.load(getClass().getResource("root.fxml"));
 			Scene scene = new Scene(now);
 			Stage primaryStage =(Stage) Check.getScene().getWindow();
-			primaryStage.setTitle("ì£¼ì°¨ê´€ë¦¬ì‹œìŠ¤í…œ");
+			primaryStage.setTitle("ÁÖÂ÷°ü¸®½Ã½ºÅÛ");
 			primaryStage.setScene(scene);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -51,7 +51,7 @@ public class MainControl implements Initializable{
 		Thread clock = new Thread() {
 			@Override
 			public void run() {
-				SimpleDateFormat sdf = new SimpleDateFormat("í˜„ìž¬ì‹œê° : HH:mm:ss", Locale.KOREA);
+				SimpleDateFormat sdf = new SimpleDateFormat("ÇöÀç ½Ã°¢ : HH:mm:ss", Locale.KOREA);
 				while(true) {
 					String strDate = sdf.format(new Date());
 					Platform.runLater(() -> {
@@ -78,7 +78,7 @@ public class MainControl implements Initializable{
 			e.printStackTrace();
 		}
 		Scene scene = new Scene(now);
-		Stage primaryStage =(Stage) btn1.getScene().getWindow();
+		Stage primaryStage =(Stage) btn2.getScene().getWindow();
 		primaryStage.setScene(scene);
 		
 		

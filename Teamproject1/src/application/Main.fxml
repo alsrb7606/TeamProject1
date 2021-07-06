@@ -14,10 +14,10 @@
 
 <BorderPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainControl">
 	<top>
-		<Label fx:id="Clock" prefHeight="100.0" prefWidth="200.0">
+		<Label fx:id="Clock" prefHeight="100.0" prefWidth="348.0">
 			<text>현재시각:</text>
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font>
 		</Label>
 	</top>
@@ -50,12 +50,4 @@
    			</children>
 		</HBox>
 	</center>
-	<bottom>
-		<Label prefHeight="100.0" prefWidth="200.0">
-			<text>주차가능공간 :</text>
-         <font>
-            <Font size="24.0" />
-         </font>		
-		</Label>
-	</bottom>
 </BorderPane>
