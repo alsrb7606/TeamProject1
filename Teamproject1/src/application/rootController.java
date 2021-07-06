@@ -17,13 +17,11 @@ public class rootController implements Initializable {
 	@FXML protected Button btnspace1, btnspace2, btnspace3, btnspace4, btnspace5, btnspace6, btnspace7, btnspace8, btnspace9, btnspace10 ,btnspace11 ,btnspace12;
 	@FXML protected Button backmain;
 //	Button[] buttonArray = {btnspace1, btnspace2, btnspace3, btnspace4, btnspace5, btnspace6, btnspace7, btnspace8, btnspace9, btnspace10 ,btnspace11 ,btnspace12};  
-//	
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-//		for(int i=1; i<=12; i++) {
-//			CarData.hashMap2.put(buttonArray[i-1], Integer.toString(i));
-//		}	
+
 		Data data = (Data) CarData.hashMap.get("1");
 		
 		if((data.inorout == true)) {
@@ -109,7 +107,7 @@ public class rootController implements Initializable {
 			btnspace12.setStyle("-fx-background-color: #00ff00");
 		}
 		data =null;
-		//test************
+		
 		btnspace1.setOnAction(e->selectArea1(e));
 		btnspace2.setOnAction(e->selectArea2(e));
 		btnspace3.setOnAction(e->selectArea3(e));
@@ -123,7 +121,7 @@ public class rootController implements Initializable {
 		btnspace11.setOnAction(e->selectArea11(e));
 		btnspace12.setOnAction(e->selectArea12(e));
 	
-		//test************
+		
 		backmain.setOnAction(e->backMain(e));
 	}
 	
@@ -140,7 +138,7 @@ public class rootController implements Initializable {
 	}
 	
 	
-	//test***************
+	
 	
 	
 	public void selectArea2(ActionEvent event) {

@@ -1,6 +1,5 @@
 package application;
 
-import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -22,8 +21,7 @@ public class PutController implements Initializable{
 	@FXML private TextField carNumTextField;
 	@FXML private TextField locationNum;
 	
-	//밑에 두 버튼은 주입이 안되는 상태, 즉 null인 상태
-	//fxml에 있는 버튼은 주입이 되고 fxml에 없는 버튼은 null인 상태
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		backroot.setOnAction(e->backRoot(e));

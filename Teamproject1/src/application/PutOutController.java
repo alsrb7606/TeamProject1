@@ -24,7 +24,7 @@ public class PutOutController implements Initializable{
 	//int price;
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		Data data = (Data) CarData.hashMap.get(CarData.s);	//데이터 가져오기   get(자리번호=static String s)
+		Data data = (Data) CarData.hashMap.get(CarData.s);	//데이터 가져오기   get(자리번호: static String s)
 		
 		inTime.setText(String.valueOf(data.inTime.getHour())+"시"+
 					String.valueOf(data.inTime.getMinute())+"분");
