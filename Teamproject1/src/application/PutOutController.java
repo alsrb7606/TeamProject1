@@ -34,6 +34,8 @@ public class PutOutController implements Initializable{
 	
 		back.setOnAction(e->backRoot(e));		//뒤로가기
 		
+		payment.setOnAction(e->calc(e));
+		
 		if(data.inTime!=null) {
 			LocalTime curTime = LocalTime.now();
 			LocalTime inTime = data.inTime;
@@ -43,25 +45,26 @@ public class PutOutController implements Initializable{
 			CarData.price = (int) (duringTime*500);		//1분당 500원 계산
 			data.outTime=curTime;
 			data.price = CarData.price;
-			
 		}
 		
-		payment.setOnAction(e-> {
-			if(data.carNumber != null) {
-				data.inorout = false;
-			}
-			Parent select2 = null;
-			try {
-				select2 = FXMLLoader.load(getClass().getResource("Payment.fxml"));
-			} catch (IOException e1) {
-				
-				e1.printStackTrace();
-			}
-			Scene scene = new Scene(select2);
-			Stage primaryStage =(Stage) back.getScene().getWindow();
-			primaryStage.setScene(scene);
-		});
 	}
+		
+//		payment.setOnAction(e-> {
+//			if(data.carNumber != null) {
+//				data.inorout = false;
+//			}
+//			Parent select2 = null;
+//			try {
+//				select2 = FXMLLoader.load(getClass().getResource("Payment.fxml"));
+//			} catch (IOException e1) {
+//				
+//				e1.printStackTrace();
+//			}
+//			Scene scene = new Scene(select2);
+//			Stage primaryStage =(Stage) back.getScene().getWindow();
+//			primaryStage.setScene(scene);
+//		});
+//	}
 	
 	public void backRoot(ActionEvent event) {
 		try {
@@ -73,5 +76,19 @@ public class PutOutController implements Initializable{
 			e.printStackTrace();
 		}
 	}
-
+	
+	public void calc(ActionEvent event) {
+		try {
+			Data data = (Data) CarData.hashMap.get(CarData.s);
+			if(data.carNumber != null) {
+				data.inorout = false;
+			}
+			Parent select2 =FXMLLoader.load(getClass().getResource("PaymentMethod.fxml"));
+			Scene scene = new Scene(select2);
+			Stage primaryStage =(Stage) payment.getScene().getWindow();
+			primaryStage.setScene(scene);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
