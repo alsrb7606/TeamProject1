@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -11,34 +12,46 @@
 <?import javafx.scene.layout.Priority?>
 <?import javafx.geometry.*?>
 
-<BorderPane prefHeight="658.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainControl">
+<BorderPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainControl">
 	<top>
-		<Label prefHeight="40.0" prefWidth="48.0">
-			<text>현재시각</text>
+		<Label fx:id="Clock" prefHeight="100.0" prefWidth="200.0">
+			<text>현재시각:</text>
+         <font>
+            <Font size="24.0" />
+         </font>
 		</Label>
 	</top>
 	<center>
 		<HBox>
 			<padding>
-				<Insets top="5" right="5" bottom="5" left="5"></Insets>
+				<Insets bottom="5" left="5" right="5" top="5" />
 			</padding>
    			<children>
-      			<Button fx:id="btn1" mnemonicParsing="false" onAction="#checkParking" prefHeight="570.0" prefWidth="430.0" text="주차현황" wrapText="true">
+      			<Button fx:id="Check" mnemonicParsing="false" onAction="#checkParking" prefHeight="430.0" prefWidth="430.0" text="주차현황" wrapText="true">
       				<HBox.hgrow>
           				<Priority fx:constant="ALWAYS" />
        				</HBox.hgrow>
+               <font>
+                  <Font size="48.0" />
+               </font>
       			</Button>		
-      			<Button mnemonicParsing="false" prefHeight="570.0" prefWidth="430.0" text="관리자">
+      			<Button mnemonicParsing="false" prefHeight="430.0" prefWidth="430.0" text="관리자">
       				<HBox.hgrow>
           				<Priority fx:constant="ALWAYS" />
        				</HBox.hgrow>
+               <font>
+                  <Font size="48.0" />
+               </font>
       			</Button>
    			</children>
 		</HBox>
 	</center>
 	<bottom>
-		<Label prefHeight="40.0" prefWidth="76.0">
-			<text>주차가능공간:</text>		
+		<Label prefHeight="100.0" prefWidth="200.0">
+			<text>주차가능공간 :</text>
+         <font>
+            <Font size="24.0" />
+         </font>		
 		</Label>
 	</bottom>
 </BorderPane>

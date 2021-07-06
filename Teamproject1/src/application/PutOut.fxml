@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.AnchorPane?>
-
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="application.PutOutController">
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.PutOutController">
 	 <children>
-      <Label prefHeight="100.0" prefWidth="250.0" text="결제창" >
+      <Label prefHeight="100.0" prefWidth="250.0" text="결제창">
       	<font>
-      		<Font size="36"/>
+      		<Font size="36" />
       	</font>
       </Label>
-      <TextField fx:id="inTime"  layoutX="250.0" layoutY="100.0" prefHeight="100.0" prefWidth="250.0" />
-      <TextField fx:id="outTime" layoutX="250.0" layoutY="200.0" prefHeight="100.0" prefWidth="250.0" />
+      <TextField fx:id="inTime" layoutX="250.0" layoutY="100.0" prefHeight="100.0" prefWidth="250.0">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="outTime" layoutX="250.0" layoutY="200.0" prefHeight="100.0" prefWidth="250.0">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
       <Button fx:id="payment" layoutX="250.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="250.0" text="결제하기">
          <font>
             <Font size="36.0" />
@@ -38,4 +43,3 @@ fx:controller="application.PutOutController">
          </font></Label>
    </children>
 </AnchorPane>
-
