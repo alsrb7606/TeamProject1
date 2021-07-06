@@ -16,17 +16,17 @@ prefHeight="550" prefWidth="650">
 		<TableView fx:id="tableView" layoutX="120" layoutY="30"
 		prefHeight="400" prefWidth="500">
 			<columns>
-				<TableColumn prefWidth="100" text="OutData"/>
-				<TableColumn prefWidth="100" text="Carnum"/>
-				<TableColumn prefWidth="100" text="Intime"/>
-				<TableColumn prefWidth="100" text="Outtime"/>
-				<TableColumn prefWidth="100" text="Price"/>
+				<TableColumn fx:id="tc1" prefWidth="100" text="OutDate"/>
+				<TableColumn fx:id="tc2" prefWidth="100" text="Carnum"/>
+				<TableColumn fx:id="tc3" prefWidth="100" text="Intime"/>
+				<TableColumn fx:id="tc4" prefWidth="100" text="Outtime"/>
+				<TableColumn fx:id="tc5" prefWidth="100" text="Price"/>
 			</columns>
 		</TableView>
 		
 		
-		<Button layoutX="240" layoutY="480" text="뒤로가기" onAction="#handleBtnOkAction"/>
-		<Button layoutX="350" layoutY="480" text="취소" onAction="#handleBtnCancelAction"/>
+		<Button fx:id="backmain" layoutX="240" layoutY="480" text="뒤로가기" />
+		<Button layoutX="350" layoutY="480" text="취소"  />
 	</children>
 </AnchorPane>
 
