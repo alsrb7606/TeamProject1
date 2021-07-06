@@ -1,6 +1,5 @@
 package application;
 
-import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.time.LocalTime;
@@ -49,22 +48,7 @@ public class PutOutController implements Initializable{
 		
 	}
 		
-//		payment.setOnAction(e-> {
-//			if(data.carNumber != null) {
-//				data.inorout = false;
-//			}
-//			Parent select2 = null;
-//			try {
-//				select2 = FXMLLoader.load(getClass().getResource("Payment.fxml"));
-//			} catch (IOException e1) {
-//				
-//				e1.printStackTrace();
-//			}
-//			Scene scene = new Scene(select2);
-//			Stage primaryStage =(Stage) back.getScene().getWindow();
-//			primaryStage.setScene(scene);
-//		});
-//	}
+
 	
 	public void backRoot(ActionEvent event) {
 		try {
