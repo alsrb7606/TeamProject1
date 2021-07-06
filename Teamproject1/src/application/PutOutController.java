@@ -47,6 +47,9 @@ public class PutOutController implements Initializable{
 		}
 		
 		payment.setOnAction(e-> {
+			if(data.carNumber != null) {
+				data.inorout = false;
+			}
 			Parent select2 = null;
 			try {
 				select2 = FXMLLoader.load(getClass().getResource("Payment.fxml"));

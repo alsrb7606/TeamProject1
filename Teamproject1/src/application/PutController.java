@@ -1,5 +1,6 @@
 package application;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -25,23 +26,28 @@ public class PutController implements Initializable{
 	//fxml에 있는 버튼은 주입이 되고 fxml에 없는 버튼은 null인 상태
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-
 		backroot.setOnAction(e->backRoot(e));
-		putInfo.setOnAction(e->PutOk(e));		//test
+		putInfo.setOnAction(e->PutOk(e));
+		
 	}
-	
-	public void PutOk(ActionEvent event) {
+
+	public void PutOk(ActionEvent event) {	
 		try {
 			Data data= (Data) CarData.hashMap.get(CarData.s);
 			data.locationNumber= CarData.s;	//자리번호에  static 값 넣기.
 			data.carNumber=carNumTextField.getText();
 			data.curDate=LocalDate.now();
 			data.inTime=LocalTime.now();
+			if(data.carNumber != null) {
+				data.inorout = true;
+			}
 			//data.locationNumber=locationNum.getText();
 			
 			CarData.hashMap.put(data.locationNumber, data);
 			
-			Parent select2 =FXMLLoader.load(getClass().getResource("root.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("root.fxml"));
+			Parent select2 = (Parent)loader.load();
+			rootController rootcont = loader.getController();
 			Scene scene = new Scene(select2);
 			Stage primaryStage =(Stage) putInfo.getScene().getWindow();
 			primaryStage.setScene(scene);
@@ -49,19 +55,6 @@ public class PutController implements Initializable{
 			e.printStackTrace();
 		}
 	}
-	
-	
-		public void PutInOk(ActionEvent event) {
-			try {
-				Parent select2 =FXMLLoader.load(getClass().getResource("root.fxml"));
-				Scene scene = new Scene(select2);
-				Stage primaryStage =(Stage) putInfo.getScene().getWindow();
-				primaryStage.setScene(scene);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-	
 	
 	public void backRoot(ActionEvent event) {
 		try {

@@ -48,6 +48,7 @@ public class LoginController implements Initializable{
             Stage stage1 = (Stage) loginButton.getScene().getWindow();	//로그인 버튼이 있는 장면의 window를 가져와서 Stage로 캐스팅
             stage1.close();
             Stage stage = new Stage();
+            stage.setTitle("주차관리시스템");
             stage.setScene(scene);
             stage.show();
         } else if (textFieldID.getText().isEmpty() || textFieldPw.getText().isEmpty() ) { 

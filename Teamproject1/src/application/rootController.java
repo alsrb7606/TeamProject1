@@ -14,18 +14,101 @@ import javafx.stage.Stage;
 
 public class rootController implements Initializable {
 	// 자리 현황판 동작 정리
-	@FXML private Button btnspace1, btnspace2, btnspace3, btnspace4, btnspace5, btnspace6, btnspace7, btnspace8, btnspace9, btnspace10 ,btnspace11 ,btnspace12 ;
-	@FXML private Button backmain;
-	Button[] buttonArray = {btnspace1, btnspace2, btnspace3, btnspace4, btnspace5, btnspace6, btnspace7, btnspace8, btnspace9, btnspace10 ,btnspace11 ,btnspace12};  
-	
+	@FXML protected Button btnspace1, btnspace2, btnspace3, btnspace4, btnspace5, btnspace6, btnspace7, btnspace8, btnspace9, btnspace10 ,btnspace11 ,btnspace12;
+	@FXML protected Button backmain;
+//	Button[] buttonArray = {btnspace1, btnspace2, btnspace3, btnspace4, btnspace5, btnspace6, btnspace7, btnspace8, btnspace9, btnspace10 ,btnspace11 ,btnspace12};  
+//	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-		for(int i=1; i<=12; i++) {
-			CarData.hashMap2.put(buttonArray[i-1], Integer.toString(i));
+//		for(int i=1; i<=12; i++) {
+//			CarData.hashMap2.put(buttonArray[i-1], Integer.toString(i));
+//		}	
+		Data data = (Data) CarData.hashMap.get("1");
+		
+		if((data.inorout == true)) {
+			btnspace1.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace1.setStyle("-fx-background-color: #00ff00");
 		}
 		
+		data = (Data) CarData.hashMap.get("2");
+		if((data.inorout == true)) {
+			btnspace2.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace2.setStyle("-fx-background-color: #00ff00");
+		}
 		
+		data = (Data) CarData.hashMap.get("3");
+		if((data.inorout == true)) {
+			btnspace3.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace3.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("4");
+		if((data.inorout == true)) {
+			btnspace4.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace4.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("5");
+		if((data.inorout == true)) {
+			btnspace5.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace5.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("6");
+		if((data.inorout == true)) {
+			btnspace6.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace6.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("7");
+		if((data.inorout == true)) {
+			btnspace7.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace7.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("8");
+		if((data.inorout == true)) {
+			btnspace8.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace8.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("9");
+		if((data.inorout == true)) {
+			btnspace9.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace9.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("10");
+		if((data.inorout == true)) {
+			btnspace10.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace10.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("11");
+		if((data.inorout == true)) {
+			btnspace11.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace11.setStyle("-fx-background-color: #00ff00");
+		}
+		
+		data = (Data) CarData.hashMap.get("12");
+		if((data.inorout == true)) {
+			btnspace12.setStyle("-fx-background-color: #ff7f00");
+		} else if ((data.inorout == false)) {
+			btnspace12.setStyle("-fx-background-color: #00ff00");
+		}
+		data =null;
 		//test************
 		btnspace1.setOnAction(e->selectArea1(e));
 		btnspace2.setOnAction(e->selectArea2(e));
@@ -39,17 +122,13 @@ public class rootController implements Initializable {
 		btnspace10.setOnAction(e->selectArea10(e));
 		btnspace11.setOnAction(e->selectArea11(e));
 		btnspace12.setOnAction(e->selectArea12(e));
-		
-		
-		
-		
+	
 		//test************
 		backmain.setOnAction(e->backMain(e));
 	}
 	
 	public void selectArea1(ActionEvent event) {
 		try {
-			
 			CarData.s ="1";
 			Parent select1 =FXMLLoader.load(getClass().getResource("Select.fxml"));
 			Scene scene = new Scene(select1);

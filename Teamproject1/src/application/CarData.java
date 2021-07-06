@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 public class CarData {
 	static Map hashMap = new HashMap<String, Data>();
 	
-	static Map hashMap2 = new HashMap<Button, String>();
+//	static Map hashMap2 = new HashMap<Button, String>();
 	
 	static String s;		//주차장 자리번호이자 버튼번호
 	static int price;		//결제금액
@@ -18,8 +18,10 @@ public class CarData {
 
 class Data {
 	
+	boolean inorout = false;
+	
 	public Data(String locationNumber) {
-		this.locationNumber=locationNumber;
+		this.locationNumber = locationNumber;
 	}
 	LocalDate curDate;
 	String locationNumber;

@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.*?>
 
-<AnchorPane prefHeight="300" prefWidth="400" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.PaymentController">
+<AnchorPane prefHeight="300" prefWidth="400" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaymentController">
    <children>
-   	<TextField fx:id="result" Editable="false" layoutX="33.0" layoutY="37.0" prefHeight="165.0" prefWidth="334.0">
-		
-	</TextField>
-      <Button fx:id="check" layoutX="141.0" layoutY="215.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="119.0" text="확인" />
+   	<TextField fx:id="result" Editable="false" alignment="CENTER" layoutX="33.0" layoutY="29.0" prefHeight="165.0" prefWidth="334.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="check" layoutX="141.0" layoutY="221.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="119.0" text="확인">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
    </children>
 </AnchorPane>
