@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane prefHeight="300" prefWidth="400" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaymentMethodController">
+   <children>
+   	<TextField Editable="false" alignment="CENTER" prefHeight="61.0" prefWidth="400.0" text="결제 수단 선택">
+		
+	</TextField>
+	
+      <Button fx:id="check" layoutX="64.0" layoutY="186.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="119.0" text="삼성페이" />
+      <Button fx:id="check1" layoutX="216.0" layoutY="92.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="119.0" text="카드" textAlignment="CENTER" />
+      <Button fx:id="check2" layoutX="64.0" layoutY="92.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="119.0" text="현금" />
+      <Button fx:id="check3" layoutX="216.0" layoutY="186.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="119.0" text="카카오페이" />
+   </children>
+</AnchorPane>
