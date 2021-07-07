@@ -46,7 +46,6 @@ public class ManagerController implements Initializable{
 		});
 		
 		//테이블 뷰 열에 열속성 추가
-		
 		tc1.setCellValueFactory(cellData -> cellData.getValue().OutDateProperty());
 		tc2.setCellValueFactory(cellData -> cellData.getValue().CarnumProperty());
 		tc3.setCellValueFactory(cellData -> cellData.getValue().intimeProperty());
