@@ -21,7 +21,7 @@ public class rootController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-
+		//각 자리의 Data객체를 불러오면서 색깔 세팅.
 		Data data = (Data) CarData.hashMap.get("1");
 		
 		if((data.inorout == true)) {

@@ -39,7 +39,7 @@ public class PutController implements Initializable{
 			if(data.carNumber != null) {
 				data.inorout = true;
 			}
-			//data.locationNumber=locationNum.getText();
+		
 			
 			CarData.hashMap.put(data.locationNumber, data);
 			

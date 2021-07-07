@@ -14,7 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+//입차출차 선택화면 컨트롤
 public class SelectController implements Initializable{
 	@FXML private Button putIn;
 	@FXML private Button putOut;
@@ -22,6 +22,7 @@ public class SelectController implements Initializable{
 	@FXML private TextField CarNum;
 	@FXML private TextField CarTime;
 	@FXML private Button backRoot;	//뒤로가기버튼
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
@@ -39,7 +40,7 @@ public class SelectController implements Initializable{
 		LocationNum.setText(data.locationNumber.toString());
 		CarNum.setText(data.carNumber);
 		
-		putIn.setOnAction(e->PutInCar(e));
+		putIn.setOnAction(e->PutInCar(e));		//입차시간이 없을 경우 자리에 차가 없는 것으로 가정하고 출차 못하게 막음.
 		if(data.inTime==null) {
 			putOut.setOnAction(e->{System.out.println("출차할 차가 없습니다.");});
 		} else {

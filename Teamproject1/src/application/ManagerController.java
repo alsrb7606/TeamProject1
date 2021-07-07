@@ -27,10 +27,7 @@ public class ManagerController implements Initializable{
 	
 	
 	static ObservableList carmanagerList= FXCollections.observableArrayList();
-//			new CarManagerData(new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"),
-//					new SimpleStringProperty(" 테스트"), new SimpleStringProperty(" 테스트"))
-//			
-//			);;
+
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -48,8 +45,7 @@ public class ManagerController implements Initializable{
 			primaryStage.setScene(scene);
 		});
 		
-		//carmanagerList.add(resources);	리스트에 데이터 추가
-		
+		//테이블 뷰 열에 열속성 추가
 		tc1.setCellValueFactory(cellData -> cellData.getValue().OutDateProperty());
 		tc2.setCellValueFactory(cellData -> cellData.getValue().CarnumProperty());
 		tc3.setCellValueFactory(cellData -> cellData.getValue().intimeProperty());
